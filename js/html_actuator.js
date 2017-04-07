@@ -62,7 +62,42 @@ HTMLActuator.prototype.addTile = function (tile) {
   this.applyClasses(wrapper, classes);
 
   inner.classList.add("tile-inner");
-  inner.textContent = tile.value;
+  switch(tile.value){
+    case 2:
+      inner.innerHTML = '<img src="meta/2.png" class="tile-inner"/>';
+      break;
+    case 4:
+      inner.innerHTML = '<img src="meta/4.png" class="tile-inner"/>';
+      break;
+    case 8:
+      inner.innerHTML = '<img src="meta/8.png" class="tile-inner"/>';
+      break;
+    case 16:
+      inner.innerHTML = '<img src="meta/16.png" class="tile-inner"/>';
+      break;
+    case 32:
+      inner.innerHTML = '<img src="meta/32.png" class="tile-inner"/>';
+      break;
+    case 64:
+      inner.innerHTML = '<img src="meta/64.png" class="tile-inner"/>';
+      break;
+    case 128:
+      inner.innerHTML = '<img src="meta/128.png" class="tile-inner"/>';
+      break;
+    case 256:
+      inner.innerHTML = '<img src="meta/256.png" class="tile-inner"/>';
+      break;
+    case 512:
+      inner.innerHTML = '<img src="meta/512.png" class="tile-inner"/>';
+      break;
+    case 1024:
+      inner.innerHTML = '<img src="meta/1024.png" class="tile-inner"/>';
+      break;
+    case 2048:
+      inner.innerHTML = '<img src="meta/2048.png" class="tile-inner"/>';
+      break;
+  }
+  
 
   if (tile.previousPosition) {
     // Make sure that the tile gets rendered in the previous position first
